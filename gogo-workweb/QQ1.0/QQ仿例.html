@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QQ登录</title>
+		<meta name="viewport" content="width=device-width, 
+			user-scalable=no, initial-scale=1.0, maximum-scale=1.0, 
+			minimum-scale=1.0" />
+		<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+		<script src="jQuery.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		
+		
+		<style>
+			/*page-one*/
+			#myPanel{
+
+			}
+			.panelul{
+				margin-top: 30px;
+			}
+			.panellist{
+				text-decoration: none;	
+				line-height: 50px;
+				font-weight: normal!important;	
+				font-size: 19px;
+				font-family:'仿宋';
+
+				 
+			}
+			.panelli{
+				list-style-type: none;
+				background-color: bule;				
+			}
+			.panellogo{
+				width: 16px;
+	        	height:16px;
+	        	margin-left: -30px;
+	        	margin-right: 10px;
+	        	 
+			}
+			.tou{
+				margin:-7px 0 0 0;
+				font-size: 15px;
+				color: wheat;
+				font-family:'仿宋';
+			}
+			.toupic{
+				width: 22px;
+	        	height:22px;				 
+			}
+			.di{				 
+				font-size: 14px;
+				color: wheat;
+				font-family:'仿宋';
+				position: absolute;
+				top: 595px;
+			}
+			.dipic{
+				width: 16px;
+	        	height:16px;
+			}
+			.foot{
+				float: left;
+				width: 33%;
+				text-align:center;
+				margin: -10px 0; 
+			}
+			.foot a{				 
+				text-decoration: none;
+				font-size: 14px;
+			}
+			.logos{
+	        	width: 20px;
+	        	height:20px;
+	        	margin-bottom: -20px;
+	        }
+	        .search{	        	
+	        	margin-top: -30px ;
+	        }
+	        .pic{
+	        	width: 30px;
+	            height: 30px;
+	            border-radius: 15px;        }
+	        .pics{	        	 
+	        	width: 60px;
+	        	height: 60px;
+	        	border-radius: 30px;
+	        	margin-top: 10px;
+	        	margin-left: 20px; 
+	        	
+	        }
+	        
+	        
+	        /*page-two*/
+	        .back{
+	        	width: 100%;
+	        	height: 100%;
+	        	background-image: url("img/back.png");		 
+	        	 
+	        }
+	        .pic2{
+	        	height: 120px;
+	        	width:120px;
+	        	border-radius: 60px;
+	        
+	        }
+	        .pp{
+	        	 text-align: center;
+	        	 margin-top: 100px;
+	        	 color: white;
+	        	 font-size: 20px;
+	        }
+	        .login{
+	        	margin: 0 50px;
+	        }
+	        .in{
+	        	background-color: cadetblue;
+	        }
+	        .down{
+	        	margin: 165px 15px 0 15px;
+	        }
+	        
+	        
+	        /*page-three*/
+	       .backzhu{
+	       	    background-size: 100% 100%;
+	        	background-image: url("img/back3.jpg");
+	        
+	       }
+	       .bottom{
+	        	margin: 120px 15px 0 15px;
+	        }
+	        
+	        /*page-four*/
+	       .newf{	       	 
+	       	margin: 0 0!important;
+	       }
+	       .gfs{
+	       	text-decoration: none;	
+	       	
+	       }
+	       .gli{
+	       	list-style-type: none;
+	       	display: inline;	        
+	       	margin-right: 30px;
+	       	
+	       }	       
+	       .gli a:hover{
+	       	border-bottom: royalblue 3px solid; 
+	       	padding-bottom: 8px;
+	       }
+	       .gli a:active{
+	       	border-bottom: royalblue 3px solid; 
+	       	padding-bottom: 8px;
+	       }
+	       .gul{
+	       	 position:relative;
+	       	 right: 40px;
+	       }
+           .connectli{
+           	margin-bottom: -5px;
+           	
+            
+           }
+           .connecth1{
+           	height: 60px;
+           	background-color: red!important;
+           } 
+           .cul{           	 
+           	 position:relative;
+	       	 top: -16px;       	 
+           }
+           .cli{
+           	list-style-type: none;
+           	border: 1px lavender solid;
+           }
+           .cfs{
+           	text-decoration: none;
+           }
+		</style>
+	</head>
+	<body>
+		<!--第一页 登录页-->
+		 <div data-role='page' id="page-one" class="back">
+		 	<div data-role="contnet" >
+		 		<p class="pp"><img src="img/QQ1.jpg" class="pic2"><br/>登录</p>
+		 		<div data-role="fieldcontain" class="login">				     
+				    <input type="text" id="userid" placeholder="账号" />
+				    <input type="password" id="psw" placeholder="密码" />
+				    <a href="#" id="log" data-role="button" style=" border:#3366ff;;background-color:#3366ff; color: white;">登录</a>
+				</div>
+                <div class="down" >
+                	<a href="#" style="color: white;">忘记密码？</a>
+                	<a href="#" style="color: white; float: right;">帮助</a>
+                </div>
+		 	</div>
+		 </div>
+		 
+		 
+		 <!--第二页 注册页-->
+		 <div data-role="page" id="page-two" class="backzhu">
+		 	<div data-role="contnet" >
+		 		<p class="pp"><img src="img/QQ1.jpg" class="pic2"><br/>QQ注册</p>
+		 		<div data-role="fieldcontain" class="login">				     
+				    <input type="text" id="id" placeholder="账号" />
+				    <input type="password"  placeholder="密码" />
+				    <input type="password" id="password" placeholder="确认密码" />
+				    <a href="#" id="zhuce" data-role="button" style=" border:#2266ff;;background-color:#3366ff; color: white;">注册</a>
+				</div>
+                <div class="bottom" >                	 
+                	<a href="#" style="color: white; float: right;">帮助</a>
+                </div>
+		 	</div>
+		 </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		<!--第三页 聊天页-->
+		 <div data-role="page"  id="page-three" data-theme="b">
+		 	<!--顶部-->		 	 
+		 	<!--
+             	作者：826225337@qq.com
+             	时间：2017-10-25
+             	描述：面板
+             -->
+             <div data-role="panel" id="myPanel">             
+             <a href="#myPanel" data-role="none"   data-iconpos="notext" style="text-decoration: none;">
+		 		<p class="tou"><img class="toupic" src="img/movie-6.png"/> 打卡 </p>
+		 		<img src="img/me-4.png"  style="width:50px; height:50px; border-radius:25px; margin: 25px 5px 5px 2px;"  />
+		 	    <span style="  font-size: 28px ;  color: wheat; font-family:'仿宋';font-weight:bold; position:absolute;top: 70px;">大发不发</span>	
+             </a>	
+             <p style="margin-top: -3px; margin-left: 5px; font-family:'仿宋'; font-size:14px ; color: wheat;">你是我触手可得的未来...</p>
+             <div>
+             	<ul class="panelul">
+             		<li class="panelli"><img class="panellogo" src="img/movie-9.png"/><a href="#" class="panellist" style="color: wheat; ">了解会员特权</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie7.png"/><a href="#" class="panellist" style="color: wheat;">QQ钱包</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie-8.png"/><a href="#" class="panellist" style="color: wheat;">个性装扮</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie-10.png"/><a href="#" class="panellist" style="color: wheat;">我的收藏</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie-6.png"/><a href="#" class="panellist" style="color: wheat;">我的相册</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie-8.png"/><a href="#" class="panellist" style="color: wheat;">我的文件</a></li>
+             	    <li class="panelli"><img class="panellogo" src="img/movie7.png"/><a href="#" class="panellist" style="color: wheat;">免流量特权</a></li>
+             	</ul>
+             </div>
+             
+             <p class="di">
+             <img class="dipic" src="img/movie-9.png"/> 设置&nbsp;&nbsp;
+             <img class="dipic" src="img/movie-10.png"/> 夜间
+             </p>
+              
+             </div>
+		 	<div data-role="header" data-position="fixed">
+		 		  <a href="#myPanel" data-role="none"   data-iconpos="notext">
+		 		  	 <img src="img/me-4.png"  style="width: 30px; height: 30px; border-radius: 15px; margin: 5px 7px;"  />
+		 		  </a>	 		 
+		 		 <h1 style="color:wheat; font-family:'仿宋';">消息</h1>
+		 		 <a href="#"  data-icon="plus"  data-iconpos="notext"> </a>
+		 	</div>
+		 	
+		 	<!--内容-->
+		 	<div data-role="content" data-theme="a" >	
+		 		<div data-role="fieldcontain" class="search">
+                    <input type="search" name="search" id="search"  placeholder="搜索"/>  
+                </div>
+                
+                <ul data-role="listview" class="ulist">                   
+				   <li data-icon="false">
+				         <a href="#" >
+				             <img  src="img/movie-2.png"  class="pics" style="border-radius: 40px;">
+				             <h2 >小苹果
+				             <span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p class="del">揍哈呢？ 不搭理我</p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/movie-1.png"  class="pics">
+				             <h2>娱乐群<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>哈哈哈，666~</p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/movie-3.png"  class="pics">
+				             <h2>H5大家庭<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/movie-4.png"  class="pics">
+				             <h2>十天共读一本书<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>《重生》超级好看，你看了没 </p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/3.1_09.jpg"  class="pics">
+				             <h2>冠军老师<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>这么简单都不会？！百度去 </p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/3.1_11.jpg"  class="pics">
+				             <h2>我要脱单<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>对面的女孩看过来*-* </p>
+				         </a>
+				  </li>
+				   <li  data-icon="false">
+				         <a href="#">
+				             <img  src="img/3.1_13.jpg"  class="pics">
+				             <h2>Google Chrome<span style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span></h2>
+				             <p>Google Chrome is a free,open-source </p>
+				         </a>
+				  </li>
+                </ul>
+               
+
+		 	</div>
+		 	<!--底部-->
+		 	<div data-role="footer" data-position="fixed" data-theme="b" >
+		 		<div class="foot" >
+		 			<img class="logos" src="img/movie7.png"/>
+		 			 <p><a href="#" style="color: wheat; font-family:'仿宋';">消息</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-8.png"/>
+		 			<p><a href="#page-four"  data-transition="slide"style="color: wheat; font-family:'仿宋';" >联系人</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-9.png"/>
+		 			<p><a href="#" style="color: wheat; font-family:'仿宋';">动态</a></p>
+		 		</div>				 
+		    </div>
+		 </div>
+		 
+		 
+		 <!--联系人页 page-four-->
+		 <div data-role="page"  id="page-four" data-theme="b">
+		 	<!--头部-->
+		 	<div data-role="header" data-position="fixed">
+		 		  <a href="#page-three" data-role="none"   data-iconpos="notext">
+		 		  	 <img src="img/me-4.png"  style="width: 30px; height: 30px; border-radius: 15px; margin: 5px 7px;"  />
+		 		  </a>	 		 
+		 		 <h1 style="color:wheat; font-family:'仿宋';">联系人</h1>
+		 		 <a href="#" data-role="none" style="color: wheat; font-size: 18px; font-family: '仿宋'; margin-top: 8px; text-decoration: none;"   > 添加</a>
+		 	</div>
+		 	
+		 	<!--内容-->
+		 	<div data-role="content" data-theme="a" >	
+		 		<div data-role="fieldcontain" class="search"  >
+                    <input type="search" name="search" id="search"   placeholder="搜索"/>  
+                </div>
+                <ul data-role="listview" class="ulist">  
+                	<li  style="margin-bottom: 10px; border-bottom: lavender 1px solid;" >				          			              
+				             <h2 class="newf" >新朋友  <span style="margin-left: 260px;  color: gray;">></span> </h2>	
+                	</li>
+				    <li >
+				          <ul class="gul">
+				          	<li class="gli"  style="border-bottom: royalblue 3px solid; padding-bottom: 8px;"><a href="#" class="gfs" id="aa" >好友</a></li>
+				          	<li class="gli" ><a href="#five" class="gfs"  id="aa"  style="color:gray; ">群</a></li> 
+				          	<li class="gli"><a href="#six" class="gfs" style="color:gray;">多人聊天</a></li>
+				          	<li class="gli"><a href="#seven" class="gfs" style="color:gray;">设备</a></li>
+				          	<li class="gli"><a href="#eight" class="gfs" style="color: gray;">通讯录</a></li>
+				          </ul>
+				    </li>
+				    <div  class="connectli"   data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>匆匆年华</h1>
+				      <p> 
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div  class="connectli" data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>仿佛一曲</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>仿佛一生</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>好友</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>大学</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>高中</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>初中</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				    <div class="connectli"  data-role="collapsible"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+				      <h1>我是锚点</h1>
+				      <p>
+				      	<ul class="cul" data-role="listview" data-icon="false"  style="margin-bottom: -42px;">
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs">
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			小宇
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>代码不会写啊！作业好多啊。。。。。谁借我抄抄先 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-1.png"  class="pics"  >
+				          			增媚
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我好美！我怎么这么美！ </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-2.png"  class="pics"  >
+				          			一丁
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>男朋友等我呢 </p>				          			
+				          		</a>
+				          	</li>
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-3.png"  class="pics"  >
+				          			彩霞
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>小哥哥好帅！ </p>				          			
+				          		</a>
+				          	</li>				          	 
+				          	<li class="cli" >				          		
+				          		<a href="#" class="cfs"  >
+				          			<img  src="img/movie-4.png"  class="pics" style="border-radius: 40px;">
+				          			宏发
+				          			<span  style="color: gray; float: right; font-weight: normal; font-size: 14px;">14:40</span>
+				          		    <p>我们不一样！</p>				          			
+				          		</a>
+				          	</li>
+				        </ul>
+				      </p>
+				    </div>
+				</ul>
+		 	</div>
+		 	
+		 	<!--底部-->
+		 	<div data-role="footer" data-position="fixed" data-theme="b" >
+		 		<div class="foot" >
+		 			<img class="logos" src="img/movie7.png"/>
+		 			 <p><a href="#page-three" style="color: wheat; font-family:'仿宋';">消息</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-8.png"/>
+		 			<p><a href="#page-four"  data-transition="slide"style="color: wheat; font-family:'仿宋';" >联系人</a></p>
+		 		</div>
+		 		<div class="foot">
+		 			<img class="logos" src="img/movie-9.png"/>
+		 			<p><a href="#" style="color: wheat; font-family:'仿宋';">动态</a></p>
+		 		</div>				 
+		    </div>
+		 </div>
+		 
+		 
+		  
+		 
+	</body>
+	<script>
+		//登录
+		$("#log").click(function(){
+		  var userid=document.getElementById('userid').value;
+		  var psw=document.getElementById("psw").value;
+	      $.ajax({
+			type:'get',
+			//接口
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'login',userID:userid,password:psw},
+			dataType:'json',
+				//.parse(data)(拿到可读数据)
+			success:function(data){					 
+					console.log(data);
+					if(data==0){
+						alert("用户名不存在，请前往注册");
+						window.location.href="#page-two";		
+					}
+					else if(data==2){						 
+						 $('#psw').parent().append('<span style="color:red;float:right;margin:-28px 10px 0 0; " >密码不正确</span>');					  
+					}
+					else{
+						window.location.href="#page-three";	
+					}
+			},
+			error:function(){
+				alert('error');
+				
+				
+			}
+		})
+		})
+		
+		
+		//注册
+		$("#zhuce").click(function(){
+		  var userid=document.getElementById('id').value;
+		  var psw=document.getElementById("password").value;
+	      $.ajax({
+			type:'get',
+			//接口
+			url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+			data:{status:'register',userID:userid,password:psw},
+			dataType:'json',
+				//.parse(data)(拿到可读数据)
+			success:function(data){					 
+					console.log(data);
+					if(data==0){
+						alert("用户名重名");
+
+					}
+					else if(data==1){
+						 alert("注册成功，开始聊天");
+						 window.location.href="#page-three";
+					}					 
+			},
+			error:function(){
+				alert('error');				
+				
+			}
+		})
+		})
+
+		    // 只有在p上划的时候才有效果
+			$("li").on("swipeleft",'p',function(){
+				 
+				$(this).append('<span style=" text-align:center; position:absolute; top:0px; left:280px; height:80px; width:80px; background-color:red; font-size:20px; text-align:center; padding-top:27px; color:white;">删除</span>');
+			});
+
+			$("li").on("taphold",'p',function(){
+				 
+				$(this).append('<span style="text-align:center; border:1px solid gray; border-radius:10px;position:absolute; top:20px; height:20px; width:80px; background-color:gray; font-size:14px; text-align:center; ">删除 | 置顶</span>');
+			});
+		 
+          
+          
+	</script>
+</html>
