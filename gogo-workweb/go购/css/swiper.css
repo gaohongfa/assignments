@@ -1,0 +1,11 @@
+        .last{
+        	background-color: powderblue;  
+        	width: 100%; 
+        	height: 13.4rem
+        }
+        #try{
+        	text-decoration: none;
+        	margin-left: 3rem;        	
+        	font-size:0.45rem ;
+        	font-family: "微软雅黑";
+        }

@@ -1,0 +1,111 @@
+          /*头部搜索框*/		 	
+		 .search{
+		 	font-size: 0.3rem;		  
+		 }		 
+		 .p{
+		 	width: 5.5rem;
+		 	margin: -0.4rem 1rem;		  
+		 }
+		 
+		 
+		 /*轮播图*/	 
+		 .swiper-container {
+		    width: 7.5rem;
+		    height: 4rem;
+		    margin-top: 0.4rem; 
+		    margin-bottom: -4.3rem;       
+		}  
+		 
+		 
+		 
+	    /*导航条*/
+		*{
+			padding: 0;
+			margin: 0;
+		}		 
+		ul,li{
+			list-style: none;
+			font-size:0.3rem;
+		}
+		.wrapper{
+			height: 0.8rem;
+			position: relative;
+			top: 0.35rem;
+			background-color:peachpuff;
+		}
+		.wrapper .scroller{
+			position: absolute;
+		}
+		.wrapper li{
+			height: 0.7rem;
+			float: left;
+			line-height: 0.7rem;
+			padding: 0 15px;
+		}
+		.cur{
+			border-bottom:3px solid peru;
+		}
+		.nava{
+			/*超链接*/
+			text-decoration:none;			
+		}
+		
+		
+		
+		/*热推*/
+		#goodlist{
+			margin-top:4.2rem ;				  
+			padding: 0.1rem 0.1rem 0 0.25rem ;
+		}
+		.dhot{
+			/*图片所在div*/	
+			width: 50%;		
+			list-style-type: none;
+			font-size:0.3rem;
+			float: left;
+			margin-top: 0.1rem;
+		}
+		.hot{
+			/*图片*/
+			width: 85%;
+			padding: 0 0.2rem;			 
+			height: 3rem;
+			float: left;		 
+		}
+		.pt{
+			/*标题*/
+			background-color: palegoldenrod;
+			font-size:0.28rem;
+			width: 85%; ;
+			margin-left: 0.2rem;
+			text-indent: 0.1rem;	 
+			 
+		}
+		 
+		 /*底部*/
+		 .foot{			 	 
+		 	padding-left: 0.4rem;
+		 	background-color: peachpuff;
+		 	border-color: peachpuff;		 	 
+		 	bottom:0rem;
+		 	position: fixed;		 	 
+		 	width: 100%;	
+		 	float: left; 
+		 }
+		 .logo{
+	        	line-height: 0.5rem;
+	        	float: left;
+	        	width:20%;	
+	        	margin-bottom: 0.1rem;         
+	       }
+	     .logo .text{
+	     	    color: black;
+	        	font-size: 0.28rem;	        	 
+	        	display: block;
+	        	margin-top: 0.15rem;
+	        	line-height: 0.22rem;
+	      }
+	     .logo .logos{
+	        	width: 0.5rem;
+	        	height: 0.5rem;
+	        }

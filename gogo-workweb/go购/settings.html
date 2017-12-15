@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+    <title>settings</title>
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" /> 
+    <link rel="stylesheet" href="css/settings.css" />
+    
+	<script src="js/jQuery.js"></script>	 
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>	 
+	<script src="js/rem.js"></script>
+	 
+	<script src="js/settings.js"></script>
+	</head>
+	<body>		
+		<div data-role="header" class="head" style="background-color: orangered; color: white;font-weight: lighter;">
+			<a  id="logout" href="index.html" rel="external" data-role="button" data-icon="arrow-l" data-iconpos="notext"></a>
+			设置
+		</div>
+		<div data-role="content" id="neirong">
+			<ul data-role="listview">
+				       <li >
+				       	<a href="">
+				       		<img src="img/open-6.png" class="hpic"/>
+				       		<h2 id="name"></h2>
+				       		<p id="pname"></p>
+				       	</a>
+				       </li>
+				      <li><a href="#" >我的收货地址</a></li>
+				      <li data-role="list-divider"></li>
+				      <li><a href="#" >账户与安全</a></li>
+				      <li data-role="list-divider"></li>
+				      <li><a href="#">地区设置</a></li>
+				      <li><a href="#">音效与通知</a></li>
+				      <li><a href="#">隐私</a></li>
+				      <li><a href="#">通用</a></li>
+				      <li data-role="list-divider"></li>
+				      <li><a href="#">我的小蜜</a></li>
+				      <li><a href="#">关于我们</a></li>				      
+			</ul>				 
+		</div>
+        <!--退出登录按钮-->
+		<a href="" id="out" data-role="button" style="background-color: red; margin: 0.2rem 0.3rem; color: white; font-weight: lighter;">退出账号</a>
+	</body>	 
+</html>
+

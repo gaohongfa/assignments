@@ -1,0 +1,98 @@
+/*轮播图*/	 
+		 .swiper-container {
+		    width: 7.5rem;
+		    height: 6rem;	          
+		}  
+		.swiper-slide{
+			line-height: 4rem;
+		} 
+		
+		/*商品名称*/
+		.cname{
+			margin: 0.1rem 0 0 0.2rem;
+			font-size: 0.3rem;
+			width: 75%;
+			float: left;
+			color: black;
+		}
+		.share{
+			width: 0.4rem;
+		}
+		.dshare{
+		   margin: 0.1rem 0rem;
+		   font-size: 0.18em;
+		   width: 22%;
+		   float: left;
+		   color: dimgrayy;
+		   text-align: center;
+		}
+		.price{
+			margin-left: 0.2rem;
+			color: red;
+			font-size: 0.45rem;
+		}
+		.place{
+			font-size: 0.18em;
+			color: grey;
+			margin-top: 0.35rem;
+			margin-left: 0.2rem;		
+		}
+		.gray{
+			margin-top:0.25rem ;
+			}
+		.select{
+			margin-top: 0.4rem;
+			font-size: 0.3rem;
+			color: black;
+		}
+		
+		/*底部*/
+		 .foot{			 	 
+		 	padding-left: 0.4rem;
+		 	background-color: peachpuff;
+		 	border-color: peachpuff;		 	 
+		 	bottom:0rem;
+		 	position: fixed;		 	 
+		 	width: 100%;	
+		 	float: left; 
+		 }
+		 .logo{
+	        	line-height: 0.5rem;
+	        	float: left;
+	        	width:15%;	
+	        	         
+	       }
+	     .logo .text{	     	    
+	     	    text-decoration: none;
+	        	font-size: 0.28rem;	        	 
+	        	display: block;
+	        	margin-top: 0.15rem;
+	        	line-height: 0.22rem;
+	        	font-weight: lighter;
+	      }
+	     .logo .logos{
+	        	width: 0.5rem;
+	        	height: 0.5rem;
+	        }
+	     .buy1{
+	     	font-size: 0.3rem;	 
+	     	display: inline;
+	     	color: white;
+	     	font-weight: lighter;
+	     	position: relative;
+	     	bottom:0.2rem;
+	        padding:0.45rem 0.2rem;
+	     	background-color: orange;
+	     	margin-right: -0.3rem; 
+	     }
+	      .buy2{
+	     	font-size: 0.3rem;	 
+	     	display: inline;
+	     	color: white;
+	     	font-weight: lighter;
+	     	position: relative;
+	     	bottom:0.2rem;
+	        padding:0.45rem 0.35rem;
+	     	background-color: orangered;
+	     	margin-right: -0.3rem; 
+	     }

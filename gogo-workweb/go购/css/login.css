@@ -1,0 +1,22 @@
+        .log{
+		 	font-size: 0.42rem;
+		 	text-align: center; 
+		 	margin-top: 2rem; 
+		 	border-radius: 0.9rem;
+		 }
+		 .login{		 	 
+		 	font-size: 0.34rem;
+		 	margin: 0 0.7rem;
+		 }
+		 .hpic{		 	
+		 	width: 1.8rem;
+		    height: 1.8rem;		 	
+		 }		  
+		 .down{
+		 	font-size: 0.33rem;
+		 	margin:2rem 0.3rem 0.3rem 0.3rem;
+		 } 		 
+		 #noid{
+		 	font-size: 0.33rem;	
+		 	margin-left: 2rem;	 	
+		 }

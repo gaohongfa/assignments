@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
+    <title>gogo</title>
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/rem.js"></script>    
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/swiper-3.4.2.min.js"></script> 
+	<script src="js/iscroll.js"></script>
+	<script src="js/navbarscroll.js"></script>
+	<script src="js/index.js"></script>
+	 
+	 
+</head>
+<body>	 
+	   	<!--header-->
+	   	 <div data-role="header" class="head" data-position="fixed" style="background-color: papayawhip; border-color: papayawhip;">
+	   	 	<a href="settings.html"  rel="external" data-icon="grid" data-iconpos="notext">设置</a>
+	   	    <p class="p"><input type="search"  placeholder="搜索" class="search" id="psearch"/></p>
+	   	    <a href=""  rel="external" data-icon="search" data-iconpos="notext" id="search">搜索</a>
+	   	 </div>
+	   	 
+	   	 
+	   	 <!--content-->	 
+	   	 
+	   	 <!--滑动导航栏 -->
+	   	 <div class="wrapper" id="wrap">
+			<div class="scroller">
+				<ul>
+					<li class="cur"><a  id="three" href="#" class="nava" style="color:darkslategray;" >棉服</a></li>
+					<li><a href="#" id="one" class="nava" style="color: darkslategray; ">衬衫</a></li>
+					<li><a href="#" id="two" class="nava" style="color: darkslategray; ">礼服</a></li>
+					<li><a href="#" id="four" class="nava" style="color: darkslategray;">短外套</a></li>
+					<li><a href="#" id="five" class="nava" style="color: darkslategray; ">休闲</a></li>
+					<li><a href="#" id="six" class="nava" style="color: darkslategray; ">其他</a></li>					
+					<!--一共6类 添加以下3项 用于实现导航栏滑动效果-->
+					<li><a href="#" class="nava" style="color: darkslategray; ">棉服</a></li>
+					<li><a href="#" class="nava" style="color: darkslategray; ">棉服</a></li>
+					<li><a href="#" class="nava" style="color: darkslategray;  ">棉服</a></li>
+				</ul>	
+			</div>
+		</div>
+	   	 
+	   	 
+	   	 
+	   	 
+	   	<!--轮播图-->
+	   	<div class="swiper-container">
+		    <div class="swiper-wrapper"></div> 		      	
+		    <div class="swiper-pagination"></div>		      	 
+	    </div> 	     
+	    
+	    
+	    <!--热推商品-->
+	    <!--划不到最后？-->
+	    <ul id="goodlist"></ul>
+	         
+	   	 
+	   	 
+	   	 
+	   	 
+	   	 <!--footer-->
+	   	 <div   class="foot" >	
+	   	 	
+	   	 	<div class="logo"">
+	    		<img class="logos" src="img/home.png"/>
+	    		<a href="#"  class="text">首页</a>
+	    	</div>
+	    	<div class="logo">
+	    		<img class="logos" src="img/face-happy.ico"/>
+	    		<a href="#"  class="text">微淘</a>
+	    	</div>
+	    	<div class="logo">
+	    		<img class="logos" src="img/review.ico"/>
+	    		<a  href="#"  class="text">消息</a>
+	    	</div>
+	    	<div class="logo">
+	    		<img class="logos" src="img/cart.ico"/>
+	    		<a href="#" rel="external" class="text" id="cart">购物车</a>
+	    	</div>
+	    	<div class="logo">
+	    		<img class="logos" src="img/user-blue.ico"/>
+	    		<a  href="#" class="text" > 我的</a>
+	    	</div>
+	    	
+	   	  </div>
+	   	 
+	 
+</body>
+ 
+</html>
