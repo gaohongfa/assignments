@@ -1,0 +1,164 @@
+﻿<!--
+	作者：河北师范大学h5项目组可乐队
+	时间：2017-12-23
+	描述：用于年会抽奖的小程序，需要把员工图片放到images文件夹中并命名，点击页面左下方的点此上传文件，选择images文件全选图片并上传，然后就可以开始抽奖啦！
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>			 
+			body{
+				background-image: url(img/bgp4.jpg);
+				background-repeat: no-repeat;
+				background-size:100% auto;	
+				background-origin:border-box;		 
+			}
+			#imgs{
+				margin: 0 auto;
+				width:250px;
+				height: 300px;				 
+				border-radius: 10px;
+			}
+			 
+			#box{								 
+				font-size: 40px;
+				width: 300px;
+				height: 50px;
+				font-family: "隶书";
+				margin:0 auto;
+			}
+			#start{				
+				font-family: "隶书";
+				border-radius: 10px;
+				font-size: 40px;
+				width: 350px;
+				background-color: rgb(252,60,47);
+				border-color:rgb(252,60,47);
+				outline: none;
+			}
+			#btn{
+				width: 350px;
+				margin: 0 auto;
+			}
+			#logop{
+				margin-left: 50px;
+				width: 250px;				
+			}
+			 .a-upload {
+			    padding: 4px 10px;
+			    height: 20px;
+			    line-height: 20px;
+			    position: relative;
+			    cursor: pointer;
+			    color: #888;
+			    background: #fafafa;
+			    border: 1px solid #ddd;
+			    border-radius: 4px;
+			    overflow: hidden;
+			    display: inline-block;
+			    *display: inline;
+			    *zoom: 1;
+			     text-decoration: none;
+			}
+			.a-upload  input {
+			    position: absolute;
+			    font-size: 100px;
+			    right: 0;
+			    top: 0;
+			    opacity: 0;
+			    filter: alpha(opacity=0);
+			    cursor: pointer;
+			}
+			.a-upload:hover {
+			    color: #444;
+			    background: #eee;
+			    border-color: #ccc;
+			    text-decoration: none
+			}
+		</style>
+	</head>
+	<body>
+	    <!-- 左上角logo -->
+		<div>
+			<img src="img/logo.png" id="logop" />
+		</div>
+        
+        <!-- 照片位置 -->
+		<div id="imgs">
+			<img src="img/start.png" id="people" style="width: 250px; height: 300px; border-radius: 10px;">
+		</div>        
+		<div id="box">获奖人：</div>
+
+		<!-- 抽奖按钮 -->
+		<div id="btn"><button id="start">点此开始抽奖</button></div>
+
+		<!-- 背景音乐 -->
+		<audio src="img/bgm-1.mp3"  id="bgm"></audio>
+
+		<!-- 选择文件 -->
+		<a href="javascript:;" class="a-upload">
+		    <input type="file" onchange="upload(this)" value="images/" multiple="true">点击这里上传文件
+		</a>
+
+	</body>
+	<script>
+
+		function upload(input) {  //支持chrome IE10  
+			var arr=[];
+		    if (window.FileReader) {  
+		         var file = input.files;  
+		         for(var i=0;i<file.length;i++){
+		         	 filename = file[i].name.split(".")[0];  
+		         	 console.log(filename);
+		         	 console.log(file[i].name);
+		         	 arr.push({img:'images/'+file[i].name,name:filename});
+		         }	         
+		    }   
+		    console.log(arr);
+        
+		 //var arr=[{img:'img/wkx.jpg',name:'王开心'},{img:'img/mjs.jpg',name:'高宏发'},{img:'img/zzx.jpg',name:'武淼淼'},{img:'img/wmm.jpg',name:'一号'},{img:'img/mjs.jpg',name:'二号'},{img:'img/zzx.jpg',name:'三号'}];
+		var i=0;
+		var box=document.getElementById('box');
+		var people=document.getElementById('people');
+		var btn=document.getElementById('start');
+		var bgm=document.getElementById('bgm');
+		var flag=true;
+		var timer;
+		//var length=arr.length;//为了减少开销，不用每次都算
+		document.getElementById("start").onclick=function(){
+			if(flag){   
+			btn.innerHTML='点此停止抽奖';			
+			timer=setInterval(function(){
+				bgm.play();
+				if(i>=arr.length){
+					i=0;
+				}
+				n=++i;
+				box.innerHTML="姓名："+arr[n-1].name;
+				people.src=arr[n-1].img;
+				
+			},100);
+		 }
+			else{
+				bgm.pause();
+				clearInterval(timer);			 
+			    arr.splice(n-1,1);
+				for(let i=0;i<arr.length;i++){
+					console.log(arr[i]);
+				}
+				console.log(arr.length);
+				if(arr.length==1){
+					alert('人数不够，请刷新页面重新抽奖');
+				}
+				else{
+					btn.innerHTML='恭喜您，中奖啦！';
+				}
+				
+			}
+			flag=!flag;//每次都取反
+		}
+		}
+	</script>
+</html>
