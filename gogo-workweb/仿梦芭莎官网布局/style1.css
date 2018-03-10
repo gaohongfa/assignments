@@ -1,0 +1,264 @@
+    body{
+    	margin: 0px auto;
+    	padding: 0px  auto;
+               font-family: 'ºÚÌå'£»
+    }
+    a:link{
+    	text-decoration: none;
+    }
+    #space{
+    	width: 1000px;
+    	height: 1350px;
+    	 }
+    #h-1{
+    	align:center;
+    	height:25px;
+    	width: 1000px;
+    	background-color: rgb(246,246,246);
+    	padding-left: 700px;
+    	padding-top: 7px;
+
+    }
+    .l1{
+    	color: rgb(102,102,102);
+    	float: left;
+    	font-size: 12px;
+    }
+    .l2{
+    	 
+    }
+    a:hover{
+    	color: #b80000;
+    }
+    #h-2{
+    	margin: 30px auto;
+    	width: 1060px;
+    }
+
+    #logo{
+    	margin-left: 100px;
+       float: left; 
+    }	
+    #b1{
+    	margin-top: 8px;
+    	margin-left: 100px;
+    	 float: left; 
+    	height: 30px;
+    	width: 400px;
+    	border-color: #ff1493;
+    	color: #d3d3d3;
+    }
+     #h3{
+    	padding-top: 4px;
+    	margin-top: 5px;
+    	float: left; 
+    	height: 40px;
+    	width: 80px;
+    	background-color: #ff1493;
+    	color: white;
+                font-size:1em;
+    	font-weight: bolder;
+    	text-align: center;
+    }
+    #h4{
+    		float: left; 
+    		position: relative;
+    		top: -65px;
+    		left: 600px;
+    }
+    #h5{
+    	margin-top: 80px;
+    	position: relative;
+    	left: -110px;
+    }
+   .l3{
+   	color: #a9a9a9;
+   	float: left;
+   	font-size: 0.8em;
+   }
+   #center{
+    
+   }
+   #c-1{
+   	margin-left: 50px;
+   	clear: both;
+   	width: 1200px;
+   }
+   .c1{
+
+   	margin-left: 25px;
+   	float: left;
+   }
+   .c2{
+     width: 500px;
+     font-size:0.9em; 
+     color: black;
+      font-weight: bolder;
+
+   }
+   #c-2{
+   	float: left;
+   	margin-left: 300px;
+   	margin-bottom: 5px;
+   }
+   .c3{
+        margin-right: 10px;
+   	 	float: left;
+   }
+   #c-3{
+   	clear: both;
+   	 width: 1400px;
+   	 height: 430px;
+   	 background-image: url(image/bg2.jpg);
+   	 position: relative;
+   	 left: -50px;
+   }
+   #list1{
+   	margin-left: 70px;
+   	padding : 20px;
+   	width: 200px;
+   	height: 430px;
+   	background-color: black;
+   }
+   .list-c{
+   	 margin-bottom: 17px;
+   }
+   .a1{
+     color: #dcdcdc;
+     font-weight: bolder;
+      font-size: 0.9em;
+   }
+   .a{
+   color: #dcdcdc;
+   font-size: 0.8em;
+   }
+   #c-4{
+   	margin-top: 10px;
+      margin-left:35px;
+   }
+   #bg2{
+     float: left;
+   }
+   .blackl{
+      	color: gray;
+     font-size: 0.9em;
+     padding:5px 16px;
+   }
+  
+   a.blackl:hover{
+     color: white;
+     width: 90px;
+    	height: 20px;
+     background-color: black;
+   }
+   .black2{
+   	float: left;
+   	border-width: 1px;
+   	border-style: solid;
+   	border-color:  #a9a9a9;
+   	width: 90px;
+   	height: 20px;
+   	margin-top: 8px;
+   	margin-left:20px;
+   	text-align: center;
+   }
+   #black3{
+   	margin-left: 250px;
+    padding:5px 0px;
+   
+   }
+   #bg3{
+     margin-left: 150px;
+   }
+   #ccc{
+   	margin-left: -100px;
+   }
+   #c-5{
+   	width: 1300px;
+
+   	padding-left: 120px;
+   	background-color: yellow;
+   }
+   #c-6{
+   	 margin-top: 15px; 
+   }
+   #footer{
+    width: 1300px;
+     	height: 500px;
+   	padding-left: 75px;
+   	padding-top: 20px;
+   	background-color: #dcdcdc;
+   }
+   #foot1{
+    font-size: 1.1em;
+   	font-weight: bolder;
+   	margin: 50px auto;
+   }
+   .foot2{
+   	font-weight: bolder;
+   	font-size: 0.8em;
+   	color: black;
+
+
+   }
+   .foot3{
+     margin-left: 70px; 
+     margin-right: 44px;
+     float: left;
+   }
+   #foot5{
+    
+   	float: left;
+   }
+   .foot6{
+   	  float: left;
+   	  margin-left: 60px;
+   	  margin-right: 14px;
+
+   }
+   #listf{
+   	float: left;
+
+   }
+   .listf1{
+   	 float: left;
+                  margin-left:10px;
+   }
+.new{
+        color:gray;
+        font-size:13px;
+        margin-right:21px;
+}
+a.new:hover{
+ 
+color:black;
+}
+   #d1{
+    margin-left: 350px;
+
+   }
+  * .d1{
+   	float: left;
+   	margin-top: 40px;
+            margin-right:10px;
+   }
+
+   .c1{
+   	     float: left;
+   		font-size: 0.8em;
+   		 	color: gray;
+   }
+   #banquan{
+    padding-top: 400px;
+   	margin-left: 350px;
+  
+   
+
+   }
+   #c2{
+   	float: left;
+   	font-size: 0.8em;
+   	color: gray;
+   	margin-left:-100px;
+   	margin-top: 10px;
+   }
